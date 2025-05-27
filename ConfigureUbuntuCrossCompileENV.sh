@@ -1,3 +1,4 @@
+#!/bin/bash
 # Date:        2025/02/20
 # Author:      majorzpley
 # Author:      Wong
