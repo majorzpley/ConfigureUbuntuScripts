@@ -187,7 +187,8 @@ install_common_software(){
     apt-get update
     check_status
 
-    local install_software_list=("ssh" "git" "vim" "tftp" "nfs" "samba")
+    # local install_software_list=("ssh" "git" "vim" "tftp" "nfs" "samba")
+    local install_software_list=("ssh" "git" "vim" "tftp" "nfs")
     echo -e "${BLUE_COLOR}install_software_list: ${install_software_list[*]}.${END_COLOR}"
 
     #install ssh
@@ -211,9 +212,9 @@ install_common_software(){
         apt-get -y install nfs-kernel-server && nfs_configure && echo -e "${BLUE_COLOR}nfs install completed.${END_COLOR}"
     fi
     #install and configure samba
-    if (echo "${install_software_list[@]}" | grep -wq "samba");then
-        apt-get -y install samba && samba_configure && echo -e "${BLUE_COLOR}samba install completed.${END_COLOR}"
-    fi
+    # if (echo "${install_software_list[@]}" | grep -wq "samba");then
+    #     apt-get -y install samba && samba_configure && echo -e "${BLUE_COLOR}samba install completed.${END_COLOR}"
+    # fi
 }
 # 安装自定义软件
 install_user_software() {
