@@ -200,9 +200,9 @@ install_common_software(){
         apt-get -y install git && echo -e "${BLUE_COLOR}git install completed.${END_COLOR}"
     fi
     #install and configure vim
-    if (echo "${install_software_list[@]}" | grep -wq "vim");then
-        apt-get -y install vim && vim_configure && echo -e "${BLUE_COLOR}vim install and configure completed.${END_COLOR}"
-    fi
+    # if (echo "${install_software_list[@]}" | grep -wq "vim");then
+    #     apt-get -y install vim && vim_configure && echo -e "${BLUE_COLOR}vim install and configure completed.${END_COLOR}"
+    # fi
     #install and configure tftp
     if (echo "${install_software_list[@]}" | grep -wq "tftp");then
         apt-get -y install tftp-hpa tftpd-hpa && tftp_configure && echo -e "${BLUE_COLOR}tftp install completed.${END_COLOR}"
